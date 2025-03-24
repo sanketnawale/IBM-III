@@ -13,8 +13,8 @@ class SpoolData(BaseModel):
 def get_zos_jobs():
     cmd = [
         'zowe.cmd', 'zos-jobs', 'list', 'jobs',
-        '--user', 'Z00805',
-        '--password', 'WZK31TTE',
+        '--user', 'Z5',
+        '--password', '',
         '--host', '204.90.115.200',
         '--port', '10443',
         '--ru', 'false'
@@ -25,8 +25,8 @@ def get_zos_jobs():
 def get_job_spool(jobid):
     cmd = [
         'zowe.cmd', 'zos-jobs', 'view', 'all-spool-content', jobid,
-        '--user', 'Z00805',
-        '--password', 'WZK31TTE',
+        '--user', 'Z5',
+        '--password', 'W',
         '--host', '204.90.115.200',
         '--port', '10443',
         '--ru', 'false'
